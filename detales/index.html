@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renginio Detalės</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+    .star {
+        cursor: pointer;
+        font-size: 24px;
+        color: gray;
+    }
+
+    .star.selected {
+        color: gold;
+    }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/index.html">Miesto Renginiai</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/index.html">Pagrindinis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kategorijos.html">Kategorijos</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+<div class="container mt-5">
+    <button class="btn btn-secondary mb-3" onclick="window.location.href='index.html'">⬅ Grįžti į sąrašą</button>
+    <div id="eventDetails">
+        <!--renginio info bus čia-->
+    </div>
+<div class="mt-4">
+        <h5>Palikite savo įvertinimą:</h5>
+        <div class="rating" id="rating">
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+        </div>
+        <p id="currentRating">Bendras įvertinimas: <span id="averageRating">0</span></p>
+    </div>
+</div>
+
+<div class="mt-4">
+    <h5>Komentarai:</h5>
+    <div id="commentsSection">
+        <div id="comments"></div>
+    </div>
+
+    <div class="comment-box mt-3">
+        <h6>Palikite savo komentarą:</h6>
+        <textarea id="commentInput" class="form-control" rows="3" placeholder="Įrašykite savo nuomonę..."></textarea>
+        <button id="addCommentButton" class="btn btn-primary mt-2">Pridėti komentarą</button>
+    </div>
+</div>
+</div>
+
+<script src="detales.js"></script>
+</body>
+</html>
